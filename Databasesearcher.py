@@ -16,7 +16,6 @@ def signal_handler(sig, frame):
     print("\nInterrupt received. Exiting...")
     running = False
     if process_thread and process_thread.is_alive():
-        # Signal to stop the processing
         process_thread.join()  # Wait for the thread to finish if necessary
     sys.exit(0)
 
